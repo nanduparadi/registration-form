@@ -1,0 +1,202 @@
+{
+  "users": [
+    {
+      "firstname": "gopi",
+      "lastname": "krishna",
+      "email": "gopi@gmail.com",
+      "username": "gopi39",
+      "password": "2023-02-23",
+      "mobile": "9889340839",
+      "address": "hyd",
+      "doj": "2023-02-23",
+      "id": 1
+    },
+    {
+      "firstname": "rohit",
+      "lastname": "sharma",
+      "email": "rohit@gmail.com",
+      "username": "rohit@45",
+      "password": "rohit@45",
+      "mobile": "8974399473",
+      "address": "mumbai",
+      "doj": "2023-02-08",
+      "id": 2
+    },
+    {
+      "firstname": "virat",
+      "lastname": "kohli",
+      "email": "vk18@gmail.com",
+      "username": "kohli18",
+      "password": "2023-02-17",
+      "mobile": "8945210393",
+      "address": "bengaluru",
+      "doj": "2023-02-17",
+      "id": 3
+    },
+    {
+      "firstname": "ram",
+      "lastname": "kumar",
+      "email": "ram@gmail.com",
+      "username": "ramkumar",
+      "password": "ramkumar",
+      "mobile": "8390928321",
+      "address": "chennai",
+      "doj": "2021-06-24",
+      "id": 4
+    },
+    {
+      "firstname": "chris ",
+      "lastname": "gayle",
+      "email": "gayle333@gmail.com",
+      "username": "gayle333",
+      "password": "2023-02-15",
+      "mobile": "8947302481",
+      "address": "west indies",
+      "doj": "2023-02-15",
+      "id": 5
+    },
+    {
+      "firstname": "cris",
+      "lastname": "lyn",
+      "email": "lyn@gmail.com",
+      "username": "lyn400",
+      "password": "lyn400",
+      "mobile": "7899238400",
+      "address": "aus",
+      "doj": "lyn400",
+      "id": 6
+    }
+  ],
+  "countries": [
+    {
+      "name": "India"
+    },
+    {
+      "name": "United States"
+    }
+  ],
+  "states": [
+    {
+      "name": "Tamil Nadu",
+      "countryname": "India"
+    },
+    {
+      "name": "Telangana",
+      "countryname": "India"
+    },
+    {
+      "name": "Andhra Pradesh",
+      "countryname": "India"
+    },
+    {
+      "name": "Washington D.C",
+      "countryname": "United States"
+    },
+    {
+      "name": "New York",
+      "countryname": "United States"
+    },
+    {
+      "name": "New Jersy",
+      "countryname": "United States"
+    },
+    {
+      "name": "California",
+      "countryname": "United States"
+    }
+  ],
+  "districts": [
+    {
+      "name": "Guntur",
+      "statename": "Andhra Pradesh"
+    },
+    {
+      "name": "Srikakulam",
+      "statename": "Andhra Pradesh"
+    },
+    {
+      "name": "Visakhapatnam",
+      "statename": "Andhra Pradesh"
+    },
+    {
+      "name": "Chittoor",
+      "statename": "Andhra Pradesh"
+    },
+    {
+      "name": "Vijayawada",
+      "statename": "Andhra Pradesh"
+    },
+    {
+      "name": "Kadapa",
+      "statename": "Andhra Pradesh"
+    },
+    {
+      "name": "Nalgonda",
+      "statename": "Telangana"
+    },
+    {
+      "name": "Hyderabad",
+      "statename": "Telangana"
+    },
+    {
+      "name": "Karimnagar",
+      "statename": "Telangana"
+    },
+    {
+      "name": "Warangal",
+      "statename": "Telangana"
+    },
+    {
+      "name": "Suryapet",
+      "statename": "Telangana"
+    },
+    {
+      "name": "Khammam",
+      "statename": "Telangana"
+    },
+    {
+      "name": "Chennai",
+      "statename": "Tamil Nadu"
+    },
+    {
+      "name": "Coimbatore",
+      "statename": "Tamil Nadu"
+    },
+    {
+      "name": "Kanchipuram",
+      "statename": "Tamil Nadu"
+    },
+    {
+      "name": "Madurai",
+      "statename": "Tamil Nadu"
+    },
+    {
+      "name": "Viluppuram",
+      "statename": "Tamil Nadu"
+    },
+    {
+      "name": "Thanjavur",
+      "statename": "Tamil Nadu"
+    },
+    {
+      "name": "Manhattan",
+      "statename": "New York"
+    },
+    {
+      "name": "Brooklyn",
+      "statename": "New York"
+    },
+    {
+      "name": "Times Square",
+      "statename": "New York"
+    },
+    {
+      "name": "Hells Kitchen",
+      "statename": "New York"
+    },
+    {
+      "name": "Williamsburg",
+      "statename": "New York"
+    }
+  ]
+}

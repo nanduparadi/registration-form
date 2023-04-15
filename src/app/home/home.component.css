@@ -1,0 +1,24 @@
+/* span{
+    color: red;
+}
+ */
+
+.mainHead{
+    background-color: #6fb8d3;
+    height: 56px;
+}
+.container {
+    max-width: 100%;
+}
+tr{
+    text-align:center ;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.table { 
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+}

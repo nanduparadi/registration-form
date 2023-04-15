@@ -1,0 +1,39 @@
+.card{
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    margin: 50px auto;
+    padding: 20px;
+    /* border: 1px solid rgb(186, 182, 182); */
+    border: 1px solid #d5d5d5;
+    background: #eee;
+
+
+}
+h1{
+    margin-bottom: 24px;
+    color: #0d6efd;
+}
+
+.input-field.error{
+    border: 1px solid rgb(236, 25, 25);
+    color: red;
+    border-radius: 5px;
+}
+input{
+    border: 1px solid #979595;
+}
+
+/* button{
+    color: #fff;
+    background-color: #1797B1;
+    border-color: #14849a;
+    box-shadow: 0 2px 0 0 #10697b;
+}
+
+button:hover{
+    color: #fff;
+    background-color: #1797B1;
+    border-color: #14849a;
+    box-shadow: 0 2px 0 0 #10697b;
+} */
+

@@ -1,0 +1,43 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                </div>
+                <form [formGroup]="loginForm">
+                   
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">User Name</label>
+                          <div class="input-field" [class.error] ="loginForm.controls['username'].dirty && loginForm.hasError('required','username')">
+                            <input type="email" formControlName="username" class="form-control" id="exampleInputEmail1"  >
+                          </div>
+                        </div> 
+                        <small *ngIf="loginForm.controls['username'].dirty && 
+                          loginForm.hasError('required','username')" class="text-danger">*User Name is required</small>
+
+                        <pre></pre>
+
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <div class="input-field" [class.error]="loginForm.controls['password'].dirty && 
+                          loginForm.hasError('required','password')">
+                            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" >
+                          </div>
+                        </div>
+                        <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')"  class="text-danger">*Password  is required</small>
+                        <div *ngIf="submitted && loginForm.controls?.['password']?.errors?.['minlength']" class="text-danger">Password must be 8 characters</div>
+
+
+                        <pre></pre>
+                        <button type="submit" class="btn btn-primary" (click)="onSubmit()" >Login</button>
+                       
+                        <div class="text-center pt-4 text-muted">Don't have account ? <a routerLink = "/signup">Create a new user</a> </div>
+                        <!-- <h6>Don't have account ?</h6> <a routerLink="/signup">Create a new user</a> -->
+                     
+                </form>
+          </div>
+        </div>
+    </div>
+</div>

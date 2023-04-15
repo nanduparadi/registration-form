@@ -1,0 +1,17 @@
+<!-- **********date********* -->
+
+<label>Recharge Plans : </label>
+<select [(ngModel)]="rechargePlan"> 
+    <option value="30">Plan A</option>
+    <option value="56">Plan B</option>
+    <option value="84">Plan C</option>
+</select>
+<br>
+Recharge Date:
+ <input type="date" [(ngModel)]="dt_recharge" (change)="calculatedueDate()">
+ <br>
+ ResultDate:{{this.dateDisplay}}
+ <!-- <label *ngIf="this.dt_recharge" >ResultDate:{{this.duedate}}</label>  -->
+<br>
+<button (click)="saveItem()" >Save</button>
+

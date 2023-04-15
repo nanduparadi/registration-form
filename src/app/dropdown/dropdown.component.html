@@ -1,0 +1,53 @@
+<br> &nbsp; 
+Country:
+ <select [(ngModel)]="country" (change)="getStates()" >
+     <option [value]="-1" selected>-select-</option>   
+    <option *ngFor="let item of countries" [value]="item['name']" >{{item['name']}}</option>
+</select> &nbsp;
+
+State:
+<select [(ngModel)]="state" (change)="getDistricts()">
+    <option [value]="-1" selected>-select-</option>   
+    <option *ngFor="let item of states" [value]="item['name']" >{{item['name']}}</option>
+</select> &nbsp;
+
+District:
+<select [(ngModel)]="district"> 
+    <option [value]="-1" selected >-select-</option>
+    <option *ngFor="let item of districts" [value]="item['name']">{{item['name']}}</option>
+</select>
+<br>
+<br>
+&nbsp;
+<!-- *********checkboxes********* -->
+Technical Skills:
+<input type="checkbox" [(ngModel)]="checkbox1" value="C"  (change)="isChecked($event)">C &nbsp;
+<input type="checkbox" [(ngModel)]="checkbox2" value="Java" (change)="isChecked($event)">Java &nbsp;
+<input type="checkbox" [(ngModel)]="checkbox3" value="Angular" (change)="isChecked($event)">Angular &nbsp;
+<input type="checkbox" [(ngModel)]="checkbox4" value="React" (change)="isChecked($event)">React &nbsp;
+<input type="checkbox" [(ngModel)]="checkbox5" value="JavaScript" (change)="isChecked($event)">JavaScript  <br> <br>
+
+<!-- ********radioButton********  -->
+<!-- Do you agree to the terms & Conditions? <br>
+&nbsp;&nbsp;<input type="radio" value="Yes" checked  (change)="isRadioChecked($event)">Yes &nbsp;
+&nbsp;<input type="radio" value="No" (change)="isRadioChecked($event)">No
+<br> -->
+<label>Select a day:</label>
+<div *ngFor="let day of days">
+    &nbsp;
+    <input type="radio" 
+    name="dayOfTheWeek"
+    value="{{day}}" 
+     (change)="radioCheckedValue($event)"> 
+     <i>{{day}}</i>
+</div> 
+<p>&nbsp; <span>You selected:</span> <b>{{selectedDay}}</b></p>
+
+<!-- *************Date******************* -->
+
+&nbsp;<label>Joining date: &nbsp;</label>
+<input type="date" [(ngModel)]="myDate">
+<br>
+
+Selected Date: {{myDate | date:"dd/MM/YYYY"}}  <br>
+&nbsp; <button (click)="saveData()"  class="btn btn-primary">Save</button>
