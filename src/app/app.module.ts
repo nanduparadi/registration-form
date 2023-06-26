@@ -12,6 +12,10 @@ import { UserdataComponent } from './userdata/userdata.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { TestingComponent } from './testing/testing.component';
 import { DateComponent } from './date/date.component';
+import { RoutingComponent } from './components/routing/routing.component';
+import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { ToDoComponent } from './components/to-do/to-do.component';
+import { HighlightPipe } from './highlight.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,9 @@ import { DateComponent } from './date/date.component';
     DropdownComponent,
     TestingComponent,
     DateComponent,
+    RoutingComponent,
+    ToDoComponent,
+    HighlightPipe,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,7 @@ import { DateComponent } from './date/date.component';
     HttpClientModule
     
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

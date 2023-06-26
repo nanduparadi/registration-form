@@ -8,6 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  lists={
+    name:"chari",
+      age:21,
+      city:"guntur",
+  }
   usersArray:any[] = [];
   isDialogwindow=false;
   // fromHeader="Userdata";
@@ -34,6 +39,7 @@ export class HomeComponent {
       console.log(res);
       if(searchkeyword === "")
       {
+        alert("Please select a search")
         this.usersArray = res;
         this.errormsg = false;
       }
@@ -44,6 +50,7 @@ export class HomeComponent {
         e.email.toLowerCase().includes(searchkeyword.toLowerCase()) || e.address.toLowerCase().includes(searchkeyword.toLowerCase()) ||
         e.lastname.toLowerCase().includes(searchkeyword.toLowerCase())
         );
+        
         console.log(this.usersArray);
         if (this.usersArray.length == 0)
         {
