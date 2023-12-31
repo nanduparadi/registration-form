@@ -9,7 +9,7 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
 
-  usersList(data: any) {
+  postUsersList(data: any) {
     return this.http.post<any>("http://localhost:3000/users", data)
     .pipe( map( (res:any )=>{
       return res;
@@ -29,7 +29,7 @@ export class ApiService {
       return res;
      }))
   }
-  
+
   getUsersData() {
     return this.http.get<any>("http://localhost:3000/users")
     .pipe( map( (res:any )=>{

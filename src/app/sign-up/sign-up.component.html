@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 offset-md-4">
-        <div class="card" > 
+        <div class="card" >
             <div class="text-center">
                 <h1>User Registration</h1>
             </div>
@@ -17,7 +17,7 @@
                                 <div *ngIf="submitted && signup.controls?.['firstname']?.errors?.['required']">First Name is required</div>
                             </div>
                         </div>
-        
+
                         <div class="form-group" >
                             <label for ="lastname">Last Name</label>
                             <input type="text" class="form-control"  [(ngModel)]="user.lastname" formControlName="lastname" [ngClass]="{'is-invalid' : submitted && signup.controls?.['lastname']?.errors}">
@@ -25,7 +25,7 @@
                                 <div *ngIf="submitted && signup.controls?.['lastname']?.errors?.['required']">Last Name is required</div>
                             </div>
                         </div>
-        
+
                         <div class="form-group" >
                             <label for ="email">Email</label>
                             <input type="text" class="form-control"  [(ngModel)]="user.email"  formControlName="email"
@@ -33,10 +33,10 @@
                             <div *ngIf="submitted && signup.controls?.['email']?.errors" class="text-danger">
                                 <div *ngIf="submitted && signup.controls?.['email']?.errors?.['required']">Email is required</div>
                                 <div *ngIf="submitted && signup.controls?.['email']?.errors?.['email']">ex.. abc@gmail.com</div>
-        
+
                             </div>
                         </div>
-        
+
                         <div class="form-group" >
                             <label for ="mobile">Mobile Number</label>
                             <input type="tel" class="form-control" formControlName="mobile" [(ngModel)]="user.mobile" [ngClass]="{'is-invalid' : submitted && signup.controls?.['mobile']?.errors}">
@@ -44,7 +44,7 @@
                                 <div *ngIf="submitted && signup.controls?.['mobile']?.errors?.['required']">Mobile Number is required</div>
                             </div>
                         </div>
-        
+
                         <div class="form-group" >
                             <label for ="address">Address</label>
                             <input type="text" class="form-control" formControlName="address"  [(ngModel)]="user.address"
@@ -53,7 +53,7 @@
                                 <div *ngIf="submitted && signup.controls?.['address']?.errors?.['required']">Address is required</div>
                             </div>
                         </div>
-                        
+
                         <div class="form-group" >
                             <label for ="date">Date of Joining:</label>
                             <input type="date" class="form-control" formControlName="doj" [(ngModel)]="user.password" [ngClass]="{'is-invalid' : submitted && signup.controls?.['doj']?.errors}">
@@ -61,7 +61,7 @@
                                 <div *ngIf="submitted && signup.controls?.['doj']?.errors?.['required']">Password is required</div>
                             </div>
                         </div>
-                          
+
                         <div class="form-group" >
                             <label for ="username">User Name</label>
                             <input type="text" class="form-control" formControlName="username" [(ngModel)]="user.username"
@@ -70,7 +70,7 @@
                                 <div *ngIf="submitted && signup.controls?.['username']?.errors?.['required']">User Name is required</div>
                             </div>
                         </div>
-        
+
                         <div class="form-group" >
                             <label for ="password">Password</label>
                             <input type="password" class="form-control" formControlName="password" [(ngModel)]="user.password" [ngClass]="{'is-invalid' : submitted && signup.controls?.['password']?.errors}">
@@ -78,22 +78,22 @@
                                 <div *ngIf="submitted && signup.controls?.['password']?.errors?.['required']">Password is required</div>
                             </div>
                         </div>
-                            
+
                         <button type="submit" class="btn btn-primary"  (click)="updateUserdata(user.id)" *ngIf="userData">Update</button>
 
                     </div>
 
-               
+
                </ng-container>
-                         
-              
+
+
               <!-- <=============================================================> -->
 
 
 
                 <ng-container  *ngIf="!userData">
 
-             
+
                 <div class="form-group" style="margin-top: 15px;"  >
                     <label for ="firstname">First Name</label>
                     <input type="text" class="form-control" formControlName="firstname" [ngClass]="{'is-invalid' : submitted && signup.controls?.['firstname']?.errors}">
@@ -132,7 +132,7 @@
 
                 <div class="form-group" >
                     <label for ="address">Address</label>
-                    <input type="text" class="form-control" formControlName="address" 
+                    <input type="text" class="form-control" formControlName="address"
                     [ngClass]="{'is-invalid' : submitted && signup.controls?.['address']?.errors}">
                     <div *ngIf="submitted && signup.controls?.['address']?.errors" class="text-danger">
                         <div *ngIf="submitted && signup.controls?.['address']?.errors?.['required']">Address is required</div>
@@ -141,8 +141,8 @@
 
                 <div class="form-group" >
                     <label for ="date">Date of Joining</label>
-                    <input type="date" class="form-control" formControlName="doj" 
-                    [ngClass]="{'is-invalid' : submitted && signup.controls?.['doj']?.errors}">
+                    <input type="date" class="form-control" formControlName="doj"
+                    [ngClass]="{'is-invalid' : submitted && signup.controls['doj'].errors}">
                     <div *ngIf="submitted && signup.controls?.['doj']?.errors" class="text-danger">
                         <div *ngIf="submitted && signup.controls?.['doj']?.errors?.['required']">Date is required</div>
                     </div>
@@ -164,11 +164,15 @@
                         <div *ngIf="submitted && signup.controls?.['password']?.errors?.['required']">Password is required</div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary"  (click)="onSubmit()" *ngIf="!userData">Submit</button>            
+                <button type="submit" class="btn btn-primary"  (click)="onSubmit()" *ngIf="!userData">Submit</button>
                 </ng-container>
-                                 
+
             </form>
         </div>
     </div>
  </div>
 </div>
+
+<p *ngFor="let i of empList">{{i.firstname}}</p>
+
+

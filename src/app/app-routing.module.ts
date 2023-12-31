@@ -7,6 +7,8 @@ import { UserdataComponent } from './userdata/userdata.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { TestingComponent } from './testing/testing.component';
 import { DateComponent } from './date/date.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { YourComponentComponent } from './your-component/your-component.component';
 
 
 const routes: Routes = [
@@ -15,9 +17,11 @@ const routes: Routes = [
   {path:'signup', component:SignUpComponent}, 
   {path:'home', component:HomeComponent},
   {path:'userdata',component:UserdataComponent},
+  {path:'checkout', component:CheckoutComponent},
   {path:'dropdown', component:DropdownComponent},
   {path:'testing', component:TestingComponent},
-  {path:'date',component:DateComponent}
+  {path:'date',component:DateComponent},
+  {path:'formarray',component:YourComponentComponent}
 ];
 
 @NgModule({

@@ -25,14 +25,14 @@ export class SignUpComponent implements OnInit {
         console.log(true);
         this.api.getUserById(params['UserId']).subscribe(userdata => {
             console.log(userdata);
-            this.userData = userdata 
+            this.userData = userdata
         });
       }
       else{
         console.log(false);
       }
     });
- 
+
     this.signup = this.fb.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
@@ -40,21 +40,33 @@ export class SignUpComponent implements OnInit {
       username: ['', Validators.required],
       password: ['', Validators.required],
       mobile: ['', Validators.required],
+      doj: ['', Validators.required],
       address: ['', Validators.required],
-      doj: ['', Validators.required]
     })
 
   }
+  getAllUsers() {
+    this.api.getUsersData()
+      .subscribe(res => {
+        this.empList = res;
+        console.log(res)
+      })
+  }
+  empList:any[] = []
   onSubmit() {
     this.submitted = true;
     //call api to get the email exising
-    
+
     if (this.signup.valid) {
-      this.api.usersList(this.signup.value)
+      this.api.postUsersList(this.signup.value)
         .subscribe({
           next: (res) => {
-            alert("Data added successfully");
+            console.log(res)
+            this.empList.push(res)
+            console.log(this.empList)
+            // alert("Data added successfully");
             this.signup.reset();
+            // this.getAllUsers()
             this.router.navigate(["signin"]);
             // this.dialogRef.close('save');
           }, error: () => {
@@ -62,6 +74,8 @@ export class SignUpComponent implements OnInit {
           }
         })
     }
+
+
     // onsignUp(){
     //   if(this.signUpForm.valid){
     //     this.api.postEmployee(this.signUpForm.value)

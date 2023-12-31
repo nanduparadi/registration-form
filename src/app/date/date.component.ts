@@ -25,7 +25,6 @@ export class DateComponent {
       this.number = data["id"];
     })
   }
-
   rechargePlan = "";
   dt_recharge = "";
   duedate: any;

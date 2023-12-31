@@ -1,0 +1,18 @@
+<p>your-component works!</p>
+
+<form [formGroup]="myForm">
+  <!-- other form controls... -->
+
+  <div formArrayName="myArray">
+    <div *ngFor="let control of myArrayControls.controls; let i = index">
+      <input [formControlName]="i" placeholder="Value {{i + 1}}" formControlName="fname">
+      <button (click)="removeFormControl(i)">Remove</button>
+    </div>
+  </div>
+
+  <button (click)="addFormControl()">Add Control</button>
+</form>
+
+
+<p>observable list: {{do}}
+</p>

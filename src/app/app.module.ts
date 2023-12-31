@@ -16,6 +16,8 @@ import { RoutingComponent } from './components/routing/routing.component';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { ToDoComponent } from './components/to-do/to-do.component';
 import { HighlightPipe } from './highlight.pipe';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { YourComponentComponent } from './your-component/your-component.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { HighlightPipe } from './highlight.pipe';
     RoutingComponent,
     ToDoComponent,
     HighlightPipe,
+    CheckoutComponent,
+    YourComponentComponent,
   ],
   imports: [
     BrowserModule,
