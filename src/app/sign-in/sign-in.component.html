@@ -7,21 +7,21 @@
                     <h1>Login</h1>
                 </div>
                 <form [formGroup]="loginForm">
-                   
+
                         <div class="form-group">
                           <label for="exampleInputEmail1">UserName</label>
                           <div class="input-field" [class.error] ="loginForm.controls['username'].dirty && loginForm.hasError('required','username')">
                             <input type="email" formControlName="username" class="form-control" id="exampleInputEmail1"  >
                           </div>
-                        </div> 
-                        <small *ngIf="loginForm.controls['username'].dirty && 
+                        </div>
+                        <small *ngIf="loginForm.controls['username'].dirty &&
                           loginForm.hasError('required','username')" class="text-danger">*User Name is required</small>
 
                         <pre></pre>
 
                         <div class="form-group">
                           <label for="exampleInputPassword1">Password</label>
-                          <div class="input-field" [class.error]="loginForm.controls['password'].dirty && 
+                          <div class="input-field" [class.error]="loginForm.controls['password'].dirty &&
                           loginForm.hasError('required','password')">
                             <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" >
                           </div>
@@ -32,12 +32,13 @@
 
                         <pre></pre>
                         <button type="submit" class="btn btn-primary" (click)="onSubmit()" >Login</button>
-                       
+
                         <div class="text-center pt-4 text-muted">Don't have account ? <a routerLink = "/signup">Create a new user</a> </div>
                         <!-- <h6>Don't have account ?</h6> <a routerLink="/signup">Create a new user</a> -->
-                     
+
                 </form>
           </div>
         </div>
+        <p>© Copyright 2024 - Nandu Paradi. All rights reserved worldwide.</p>
     </div>
 </div>
