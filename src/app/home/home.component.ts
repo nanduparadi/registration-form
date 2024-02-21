@@ -5,69 +5,66 @@ import { Router } from '@angular/router';
 @Component({
   // selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  lists={
-    name:"chari",
-      age:21,
-      city:"guntur",
-  }
-  usersArray:any[] = [];
-  isDialogwindow=false;
+  lists = {
+    name: 'chari',
+    age: 21,
+    city: 'guntur',
+  };
+  usersArray: any[] = [];
+  isDialogwindow = false;
   // fromHeader="Userdata";
-  userArray: any[]=[];
-  searchValue : string = "";
-  errormsg : boolean = false;
+  userArray: any[] = [];
+  searchValue: string = '';
+  errormsg: boolean = false;
+  p: number = 1;
 
-  constructor(private api:ApiService , private route:Router ){}
+  constructor(private api: ApiService, private route: Router) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.getAllUsers();
     this.errormsg;
   }
 
-  getAllUsers(){
-    this.api.getUsersData()
-    .subscribe( res=>{
+  getAllUsers() {
+    this.api.getUsersData().subscribe((res) => {
       this.usersArray = res;
-    })
+    });
   }
 
-  searchUsers(searchkeyword:string){  
-    this.api.getUsersData().subscribe( res=>{
+  searchUsers(searchkeyword: string) {
+    this.api.getUsersData().subscribe((res) => {
       console.log(res);
-      if(searchkeyword === "")
-      {
-        alert("Please select a search")
+      if (searchkeyword === '') {
+        alert('Please select a search');
         this.usersArray = res;
         this.errormsg = false;
-      }
-      else
-      {
+      } else {
         this.usersArray = [];
-        this.usersArray = res.filter((e : any) => e.firstname.toLowerCase().includes(searchkeyword.toLowerCase()) || 
-        e.email.toLowerCase().includes(searchkeyword.toLowerCase()) || e.address.toLowerCase().includes(searchkeyword.toLowerCase()) ||
-        e.lastname.toLowerCase().includes(searchkeyword.toLowerCase())
+        this.usersArray = res.filter(
+          (e: any) =>
+            e.firstname.toLowerCase().includes(searchkeyword.toLowerCase()) ||
+            e.email.toLowerCase().includes(searchkeyword.toLowerCase()) ||
+            e.address.toLowerCase().includes(searchkeyword.toLowerCase()) ||
+            e.lastname.toLowerCase().includes(searchkeyword.toLowerCase())
         );
-        
+
         console.log(this.usersArray);
-        if (this.usersArray.length == 0)
-        {
+        if (this.usersArray.length == 0) {
           this.errormsg = true;
-        }
-        else{
+        } else {
           this.errormsg = false;
         }
-      } 
-    })
+      }
+    });
   }
-  deleteUserData(row:any){
-    this.api.deleteUser(row.id)
-    .subscribe( res=>{
+  deleteUserData(row: any) {
+    this.api.deleteUser(row.id).subscribe((res) => {
       alert('User deleted successfully');
       this.getAllUsers();
-    })
+    });
   }
   // updateUser(row:any){
   //   this.api.updateUserData(row.id,row.username).subscribe( res=>{
@@ -76,21 +73,22 @@ export class HomeComponent {
   //   })
   // }
 
-  updateUser(data:any){
+  updateUser(data: any) {
     // this.route.navigate(['/signup',data])
-    this.route.navigate(['/signup'], {queryParams : {UserId:data.id}, queryParamsHandling: 'merge'});
+    this.route.navigate(['/signup'], {
+      queryParams: { UserId: data.id },
+      queryParamsHandling: 'merge',
+    });
   }
-  signout(){
+  signout() {
     this.route.navigate(['/signin']);
   }
 
-  userInfo(data:any){
-  this.isDialogwindow=true;
-  // console.log(data);
-  this.userArray = [];
-  this.userArray.push(data);
-  console.table(this.userArray);
+  userInfo(data: any) {
+    this.isDialogwindow = true;
+    // console.log(data);
+    this.userArray = [];
+    this.userArray.push(data);
+    console.table(this.userArray);
+  }
 }
-}
-
-

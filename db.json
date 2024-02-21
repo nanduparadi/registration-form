@@ -232,39 +232,6 @@
       "id": 22
     },
     {
-      "firstname": "adsfk",
-      "lastname": "kjk",
-      "email": "jkj",
-      "username": "kk",
-      "password": "kj",
-      "mobile": "kjk",
-      "doj": "2023-10-17",
-      "address": "jkj",
-      "id": 23
-    },
-    {
-      "firstname": "adsfk",
-      "lastname": "kjk",
-      "email": "jkj",
-      "username": "kk",
-      "password": "kj",
-      "mobile": "kjk",
-      "doj": "2023-10-17",
-      "address": "jkj",
-      "id": 24
-    },
-    {
-      "firstname": "ads",
-      "lastname": "jkj",
-      "email": "jkj",
-      "username": "kdsj",
-      "password": "kj",
-      "mobile": "kjk",
-      "doj": "2023-10-17",
-      "address": "jkj",
-      "id": 25
-    },
-    {
       "firstname": "ad",
       "lastname": "dsf",
       "email": "dsf",
@@ -296,6 +263,28 @@
       "doj": "2023-11-01",
       "address": "netaginagr",
       "id": 29
+    },
+    {
+      "firstname": "sanju",
+      "lastname": "gnt",
+      "email": "sanju@gmail.com",
+      "username": "sanju",
+      "password": "sanju",
+      "mobile": "83783872",
+      "doj": "2024-01-11",
+      "address": "gnt",
+      "id": 30
+    },
+    {
+      "firstname": "swati",
+      "lastname": "kavya",
+      "email": "swati@gmail.com",
+      "username": "kavya",
+      "password": "kavyakavya",
+      "mobile": "838383838",
+      "doj": "2024-01-11",
+      "address": "asdf",
+      "id": 31
     }
   ],
   "countries": [

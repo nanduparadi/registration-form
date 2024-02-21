@@ -18,6 +18,7 @@ import { ToDoComponent } from './components/to-do/to-do.component';
 import { HighlightPipe } from './highlight.pipe';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { YourComponentComponent } from './your-component/your-component.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -40,8 +41,8 @@ import { YourComponentComponent } from './your-component/your-component.componen
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
